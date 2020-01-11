@@ -1,0 +1,17 @@
+server:
+  port: 8765
+spring:
+  application:
+    name: consul-consumer
+  cloud:
+    consul:
+      port: 8500
+      host: 192.168.230.101
+      discovery:
+        hostname: 192.168.230.110
+      config:
+        enabled: true
+        format: yaml
+        prefix: config
+        profile-separator: ':'
+        data-key: data
